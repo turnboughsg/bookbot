@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://imgur.com/a/kKl6QLp" alt="boot.dev logo"></a>
+ <img width=200px height=200px src="https://imgur.com/2b4sCz7" alt="boot.dev logo"></a>
 </p>
 
 <h3 align="center">BookBot</h3>
@@ -31,7 +31,7 @@ The bot then prints a report summary of its findings.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [Python] Python 3.10.7
+- Python 3.10.7
 
 ## ✍️ Authors <a name = "authors"></a>
 
