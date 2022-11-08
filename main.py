@@ -24,6 +24,10 @@ class BookBot:
                     letter, 0) + 1
         return self.letter_counts
 
+    def top_letter(self):
+        # returns the letter that appears the most in the text
+        return max(self.letter_counts, key=self.letter_counts.get)
+
     def print_report(self):
         self.read_text()
 
@@ -39,6 +43,9 @@ class BookBot:
         for key in sorted(letter_keys_sorted):
             print(
                 f"The '{key}' character was found {self.letter_counts[key]} times.")
+
+        print(
+            f"\nThe most common letter in the text is '{self.top_letter()}'.\n")
 
         print(f"\n --- End report of '{self.filepath.split('/')[-1]}' --- \n")
 
