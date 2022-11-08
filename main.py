@@ -26,17 +26,21 @@ class BookBot:
 
     def print_report(self):
         self.read_text()
+
         # print report of the text
-        print(f"--- Begin report of {self.filepath} ---")
+        print(f"--- Begin report of '{self.filepath.split('/')[-1]}' ---")
+
         print(f"\n Number of words found in document: {self.count_words()} \n")
 
-        # sort the dictionary by key
-        letter_keys_sorted = sorted([key for key in self.letter_counts.keys()])
-        for key in letter_keys_sorted:
-            print(
-                f"The {key} character was found {self.letter_counts[key]} times.")
+        # print each letter count in the text in ascending order
+        letter_keys_sorted = [
+            key for key in self.count_letters().keys()]
 
-        print(f"\n --- End report of {self.filepath} --- \n")
+        for key in sorted(letter_keys_sorted):
+            print(
+                f"The '{key}' character was found {self.letter_counts[key]} times.")
+
+        print(f"\n --- End report of '{self.filepath.split('/')[-1]}' --- \n")
 
 
 def main():
